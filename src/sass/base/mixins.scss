@@ -1,0 +1,47 @@
+@mixin atDesktop1580 {
+  @media screen and (max-width: 1580px) {
+    @content;
+  }
+}
+
+@mixin atTabletL1024 {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin atTablet750 {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+
+@mixin atTablet695 {
+  @media screen and (max-width: 695px) {
+    @content;
+  }
+}
+
+@mixin atMobile575 {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin atMobile530 {
+  @media screen and (max-width: 530px) {
+    @content;
+  }
+}
+
+@mixin atMobile405 {
+  @media screen and (max-width: 405px) {
+    @content;
+  }
+}
+
+@mixin atMobile340 {
+  @media screen and (max-width: 340px) {
+    @content;
+  }
+}

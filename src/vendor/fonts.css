@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'OpenSansBold';
+  font-weight: bold;
+  src: url('./OpenSans-Bold.woff') format('woff'),
+    url('./OpenSans-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'OpenSansSemiBold';
+  font-weight: 600;
+  src: url('./OpenSans-SemiBold.woff') format('woff'),
+    url('./OpenSans-SemiBold.woff2') format('woff2');
+}

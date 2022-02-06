@@ -1,0 +1,114 @@
+@import '../base/mixins.scss';
+@import '../base/variables.scss';
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 125px;
+  bottom: 77px;
+  right: 100px;
+  height: 193px;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+    width: 15px;
+  }
+
+  &__button-subtitle {
+    writing-mode: vertical-lr;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: $fontBold;
+  }
+
+  &__button {
+    width: 66px;
+    height: 66px;
+    border: none;
+    padding: 0;
+
+    &_type_dark {
+      background: url('../../images/button-nav-main.svg') transparent center no-repeat;
+
+    }
+  }
+}
+
+@include atDesktop1580 {
+  .navigation {
+    right: 75px;
+    left: 94px;
+    bottom: 57px;
+    height: 145px;
+
+    &__img {
+      width: 11px;
+    }
+
+    &__button {
+      width: 50px;
+      height: 50px;
+      background-size: contain;
+      border: none;
+    }
+  }
+}
+
+@include atTabletL1024 {
+  .navigation {
+    &__img {
+      visibility: hidden;
+    }
+  }
+}
+
+@include atTablet750 {
+  .navigation {
+    right: 50px;
+  }
+}
+
+@include atTablet695 {
+  .navigation {
+    right: 50px;
+    bottom: 40px;
+    height: 125px;
+
+    &__button {
+      width: 45px;
+      height: 45px;
+    }
+
+    &__button-subtitle {
+      // font-size: 15px;
+    }
+  }
+}
+
+@include atMobile575 {
+  .navigation {
+    height: 100px;
+
+    &__button {
+      width: 28px;
+      height: 28px;
+    }
+
+    &__button-subtitle {
+      font-size: 12px;
+    }
+  }
+}
+
+@include atMobile530 {
+  .navigation {
+    right: 25px;
+  }
+} 

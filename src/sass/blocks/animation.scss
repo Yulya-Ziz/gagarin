@@ -1,0 +1,141 @@
+@import '../base/mixins.scss';
+
+@keyframes violetCircleL {
+  from {
+    width: 1470px;
+    height: 1470px;
+    right: -200px;
+    top: -501px 
+  }
+  to {
+    width: 650px;
+    height: 650px;
+    right: -50px;
+    top: 100px;
+  }
+}
+
+@keyframes blueCircleL {
+  from {
+    width: 600px;
+    height: 600px;
+    left: 50px;
+    bottom: 50px;
+  }
+  to {
+    width: 1470px;
+    height: 1470px;
+    left: -200px;
+    bottom: -501px
+  }
+}
+
+@keyframes violetCircleM {
+  from {
+    width: 760px;
+    height: 760px;
+    right: -200px;
+    top: -200px 
+  }
+  to {
+    width: 400px;
+    height: 400px;
+    right: -50px;
+    top: 50px;
+  }
+}
+
+@keyframes blueCircleM {
+  from {
+    width: 400px;
+    height: 400px;
+    left: 50px;
+    bottom: 50px;
+  }
+  to {
+    width: 760px;
+    height: 760px;
+    left: -50px;
+    bottom: -50px
+  }
+}
+
+@keyframes violetCircleS {
+  from {
+    width: 560px;
+    height: 560px;
+    right: -200px;
+    top: -200px 
+  }
+  to {
+    width: 300px;
+    height: 300px;
+    right: -50px;
+    top: 50px;
+  }
+}
+
+@keyframes blueCircleS {
+  from {
+    width: 300px;
+    height: 300px;
+    left: 50px;
+    bottom: 50px;
+  }
+  to {
+    width: 560px;
+    height: 560px;
+    left: -50px;
+    bottom: -50px
+  }
+}
+
+.animation {
+
+  &__circle {
+    border-radius: 25px;
+    z-index: -1;
+
+    &_type_violet {
+      position: absolute;
+      background: radial-gradient(50% 50% at 50% 50%, #BD00FF 0%, rgba(247, 247, 247, 0) 100%);
+      animation: violetCircleL 10s infinite linear alternate;
+    }
+
+    &_type_blue {
+      position: absolute;
+      background: radial-gradient(50% 50% at 50% 50%, #14FFF1 0%, rgba(192, 255, 251, 0) 100%);
+      animation: blueCircleL 10s infinite linear alternate;
+    }
+  }
+}
+
+@include atTablet750 {
+  .animation {
+    &__circle {
+
+      &_type_violet {
+        animation: violetCircleM 10s infinite linear alternate;
+      }
+
+      &_type_blue {
+        animation: blueCircleM 10s infinite linear alternate;
+      }
+    }
+  }
+}
+
+@include atMobile405 {
+  .animation {
+    &__circle {
+
+      &_type_violet {
+        animation: violetCircleS 10s infinite linear alternate;
+      }
+
+      &_type_blue {
+        animation: blueCircleS 10s infinite linear alternate;
+      }
+    }
+  }
+}

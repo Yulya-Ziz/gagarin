@@ -1,0 +1,96 @@
+@import '../base/variables.scss';
+@import '../base/mixins.scss';
+
+.title {
+  font-family: $fontBold;
+  text-transform: uppercase;
+
+  &__section {
+    letter-spacing: -0.02em;
+    font-size: 90px;
+    margin: 0;
+    line-height: 110%;
+  }
+
+  &__main {
+    margin: 15px 0 0;
+    letter-spacing: 0.02em;
+    font-size: 157px;
+    color: transparent;
+    -webkit-text-stroke: 4px black;
+    line-height: 110%;
+  }
+}
+
+@include atDesktop1580 {
+  .title {
+
+    &__section {
+      font-size: 67px;
+    }  
+  
+    &__main {
+      font-size: 118px;
+      line-height: 90%;
+    }
+  }
+}
+
+@include atTablet750 {
+  .title {
+    &__section {
+      font-size: 55px;
+    }
+
+    &__main {
+      font-size: 100px;
+      margin-top: 5px;
+    }
+  }
+}
+
+@include atMobile575 {
+  .title {
+    &__section {
+      font-size: 45px;
+    }
+
+    &__main {
+      font-size: 90px;
+    }
+  }
+}
+
+@include atMobile530 {
+  .title {
+    &__section {
+      font-size: 35px;
+    }
+  
+    &__main {
+      font-size: 75px;
+      -webkit-text-stroke: 2px black;
+    }
+  }
+
+}
+
+@include atMobile405 {
+  .title {
+    &__section {
+      font-size: 30px;
+    }
+
+    &__main {
+      font-size: 59px;
+    }
+  }
+}
+
+@include atMobile340 {
+  .title {
+    &__main {
+      font-size: 55px;
+    }
+  }
+}

@@ -1,0 +1,176 @@
+@import '../base/variables.scss';
+@import '../base/mixins.scss';
+
+.header {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  
+
+  &__nav-group {
+    margin: 40px 0 286px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__contact {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  // &__button {
+  //   width: 66px;
+  //   height: 66px;
+  //   background: url('../../images/button-menu.svg') transparent center no-repeat;
+  //   background-size: contain;
+  //   border: none;
+  //   margin-left: 15px;
+  //   padding: 0;
+  // }
+
+  &__form-group {
+    display: flex;
+    align-items: center;
+    margin: 62px 0 293px;
+  }
+
+  &__form-button {
+    background: black;
+    color: white;
+    font-family: $fontBold;
+    text-transform: uppercase;
+    line-height: 120%;
+    width: 343px;
+    height: 55px;
+    border-radius: 55px;
+    border: none;
+    margin-right: 64px;
+    padding: 0;
+  }
+
+  &__form-subtitle {
+    max-width: 587px;
+    line-height: 130%;
+    margin: 0;
+  }
+}
+
+@include atDesktop1580 {
+  .header {
+    &__nav-group {
+      margin: 30px 0 215px;
+    }
+
+    &__contact {
+      line-height: 25px;
+    }
+
+    // &__button {
+    //   width: 50px;
+    //   height: 50px;
+    //   line-height: 11px;
+    // }
+
+    &__form-group {
+      margin-bottom: 220px;
+    }
+
+    &__form-button {
+      width: 258px;
+      height: 41px;
+      margin-right: 48px;
+    }
+  }
+}
+
+
+@include atTabletL1024 {
+  .header {
+    &__nav-group {
+      margin-bottom: 125px;
+    }
+
+    &__contact {
+      font-size: 20px;
+    }
+
+    &__form-group {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 47px 0 115px;    
+    }
+
+    &__form-button {
+      margin: 0 0 25px;
+    }
+  }
+}
+
+@include atTablet750 {
+  .header {
+
+    &__form-subtitle {
+      max-width: 258px;
+    }
+  }
+}
+
+@include atTablet695 {
+  .header {
+    // &__button{
+    //   width: 45px;
+    //   height: 45px;
+    // }
+
+    &__contact {
+      visibility: hidden;
+      font-size: 1px;
+    }
+  }
+}
+
+@include atMobile575 {
+  .header {
+
+    &__nav-group {
+      margin-top: 25px;
+    }
+  }
+}
+
+@include atMobile530 {
+  .header {
+
+    &__form-subtitle {
+      max-width: 195px;
+    }
+
+    &__form-button {
+      width: 195px;
+      height: 45px;
+    }
+  }
+}
+
+@include atMobile405 {
+  .header {
+
+    &__form-button {
+      margin-bottom: 43px;
+    }
+
+    &__form-group {
+      margin-bottom: 27px 0 137px;
+    }
+  }
+}

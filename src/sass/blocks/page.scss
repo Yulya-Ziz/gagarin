@@ -1,0 +1,64 @@
+@import '../base/variables.scss';
+@import '../base/mixins.scss';
+
+.page {
+  color: white;
+  font-family: $fontSemiBold;
+  font-size: 20px;
+
+  &__content {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    padding: 0 100px 0;
+  }
+}
+
+@include atDesktop1580 {
+  .page {
+    font-size: 15px;
+
+    &__content {
+      padding: 0 75px 0;
+    }
+  }
+  
+}
+
+@include atTabletL1024 {
+  .page {
+    &__content {
+      align-items: flex-start;
+    }
+  }
+}
+
+@include atTablet750 {
+  .page {
+    &__content {
+      padding: 0 50px 0;
+    }
+  }
+}
+
+@include atTablet695 {
+ .page {
+   font-size: 13px;
+ }
+}
+
+@include atMobile575 {
+  .page {
+    &__content {
+      padding: 0 40px 0;
+    }
+  }
+}
+
+@include atMobile530 {
+  .page {
+    &__content {
+      padding: 0 25px 0;
+    }
+  }
+}
